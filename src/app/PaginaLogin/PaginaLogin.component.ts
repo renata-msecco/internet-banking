@@ -6,21 +6,20 @@ export class User {
 }
 
 @Component({
-  selector: 'app-content',
-  templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  selector: 'app-login',
+  templateUrl: './PaginaLogin.component.html',
+  styleUrls: ['./PaginaLogin.component.css']
 })
 
-export class ContentComponent implements OnInit {
+export class PaginaLoginComponent implements OnInit {
 
   model = new User();
-  
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onSubmit(form) {
-    console.log(form.value)
+    console.log(form.value);
   }
 }

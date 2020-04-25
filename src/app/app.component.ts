@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,8 +8,8 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AppComponent {
   title = 'internet-banking-avanade';
-  constructor(public dialog: MatDialog) {
 
+  constructor(public dialog: MatDialog) {
   }
   openDialog() {
     const dialogRef = this.dialog.open(AppComponent, {
@@ -18,7 +19,8 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
-  }
 
+
+  }
   }
 
