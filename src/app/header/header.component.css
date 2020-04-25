@@ -1,12 +1,41 @@
-.wrapper-header  {
-    height: 30vh;
-    padding: 30px;
-    color: #fff;
+.card-header{
+    background-color: #F20544;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}   
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20vw;
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+    color: #ffffff;
+    margin:0;
 }
-   
-@media screen and (min-width: 600px) {
-    .wrapper-header {
-        height: 30vh;
+.text{
+    justify-content: flex-start;
+    padding: 0;
+    margin:0;
+    margin-bottom: 0;
+}
+
+.img-fluid{
+    max-width: 25vw;
+    height: auto;
+}
+@media screen and (min-width: 400px) {
+    .card-header {
+        height: 15vw;
+    }
+    .card-text{
+        width: 30vw;
+        padding-top: 5vw;
+        font-size: 0.8rem;
     }
    
 }
