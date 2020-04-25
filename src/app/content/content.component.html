@@ -1,17 +1,26 @@
-<form class="form ">
+<form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)" class="form ">
     <div style="display: flex;width: 100%;justify-content: center;">
-      <img src="/src/app/imagem/logocerto_page-0001-removebg.png" class="img-fluid" >
+      <img src="https://raw.githubusercontent.com/renata-msecco/internet-banking-avanade/master/src/app/imagem/logocerto_page-0001-removebg.png" class="img-fluid" >
     </div>
 
     <div class="form-group">
         <div class="col-auto">
-            <input type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Digite seu CPF">
+            <input type="text" name="cpf" class="form-control form-control-lg" id="colFormLabelLg"
+                placeholder="Digite seu CPF" [(ngModel)]="model.cpf"  #cpf="ngModel"
+                [ngClass]="{ 'is-invalid': userForm.submitted && cpf.invalid }" required>
+            <div class="invalid-feedback" *ngIf="userForm.submitted && cpf.invalid">
+                <p *ngIf="cpf.errors.required">Digite o CPF</p>
+            </div>
         </div>
     </div>
     <div class="form-group">
         <div class="col-auto">
-            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1"
-                placeholder="Digite sua senha">
+            <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1"
+                placeholder="Digite sua senha" [(ngModel)]="model.password" #password="ngModel"
+                [ngClass]="{ 'is-invalid': userForm.submitted && password.invalid }" required>
+            <div class="invalid-feedback" *ngIf="userForm.submitted && password.invalid" >
+                <div *ngIf="password.errors.required">Digite a senha</div>
+            </div>
         </div>
     </div>
     <div class="col-auto">

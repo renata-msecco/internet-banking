@@ -3,20 +3,6 @@
     padding: 30px;
     color: #fff;
 }
-
-.bg_img{
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    background: url('https://raw.githubusercontent.com/renata-msecco/internet-banking-avanade/master/src/app/logo.jpeg?raw=true') no-repeat;
-    display: flex;
-    align-items: center;
-}
    
 @media screen and (min-width: 600px) {
     .wrapper-header {
