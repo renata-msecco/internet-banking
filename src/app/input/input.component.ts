@@ -18,15 +18,7 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  eventInput($event: any){
-    console.log('event');
-    // this.valueInput.emit(teste);
-    // console.log(teste);
-  }
-
-  // valueCPF($event){
-  //   this.valueInput.emit($event);
-  //   console.log('event', $event);
-  // }
-
+  eventInput($event){
+   this.valueInput.emit($event);
+   }
 }

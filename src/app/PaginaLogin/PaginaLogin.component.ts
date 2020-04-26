@@ -26,6 +26,8 @@ logo = ['../../assets/image/logo.png'];
 nameInputCPF = 'nameInputCPF';
 nameInputSenha = 'nameInputSenha';
 nameButton = 'nameButton';
+valorCPF = '';
+valorSenha = '';
 
   model = new User();
   constructor() { }
@@ -35,8 +37,19 @@ nameButton = 'nameButton';
   onSubmit(form) {
     console.log(form.value);
   }
-  clicou(){
-    console.log('clicou');
+
+  getCPF($event){
+    this.valorCPF = $event.target.value;
+    return this.valorCPF;
+  }
+
+  getSenha($event){
+    this.valorSenha = $event.target.value;
+    return this.valorSenha;
+  }
+
+  autenticacaoDoUsuario(){
+    console.log('clicou', this.valorCPF, this.valorSenha);
   }
 }
 

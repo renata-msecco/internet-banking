@@ -28,27 +28,27 @@
     </div>
 </form> -->
 
-<form class="form"> 
-<img [src] = "logo" class="img-fluid">
-<app-input 
-[type]="text"
-[placeholder]="placeholderCpf" 
-[class]="classInput"
-[nameInput]="nameInputCPF"
-></app-input>
-<app-input 
-[type]="password"
-[placeholder]="placeholderSenha" 
-[class]="classInput"
-[nameInput]="nameInputSenha"
-></app-input>
-<app-button
-[type]="submit"
-[title]="titleButton"
-[class]="classButton"
-[nameButton]="nameButton"
-(click)="clicou()"
-></app-button>
+<form class="form">
+  <img [src]="logo" class="img-fluid">
+  <app-input 
+  [type]="text" 
+  [placeholder]="placeholderCpf" 
+  [class]="classInput" 
+  [nameInput]="nameInputCPF"
+  (keyup)="getCPF($event)"
+  ></app-input>
+  <app-input 
+  [type]="password" 
+  [placeholder]="placeholderSenha" 
+  [class]="classInput" 
+  [nameInput]="nameInputSenha"
+  (keyup)="getSenha($event)"
+  ></app-input>
+  <app-button 
+  [type]="submit" 
+  [title]="titleButton" 
+  [class]="classButton" 
+  [nameButton]="nameButton" 
+  (click)="autenticacaoDoUsuario()">
+  </app-button>
 </form>
-
-<!-- (value)="valueCPF($event.target.value)" -->
