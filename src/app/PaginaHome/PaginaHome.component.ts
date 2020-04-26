@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./PaginaHome.component.css']
 })
 export class PaginaHomeComponent implements OnInit {
-// @Input()agencia;
+  text = 'text';
+  classInput = 'input';
+  submit = 'submit';
+  classFooter = 'buttonFooter';
+  buttonSair = 'Sair';
+  buttonHome = 'Home';
   constructor() { }
 
   ngOnInit(): void {
