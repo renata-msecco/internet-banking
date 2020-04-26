@@ -10,11 +10,16 @@ export class PaginaHomeComponent implements OnInit {
   classInput = 'input';
   submit = 'submit';
   classFooter = 'buttonFooter';
-  buttonSair = 'Sair';
+  titleButtonFotter = 'Sair';
   buttonHome = 'Home';
+  nameButtonFooter = 'nameButtonFooter';
   constructor() { }
 
   ngOnInit(): void {
+  }
+  clicou(){
+    console.log('clicou');
+    console.log(this.titleButtonFotter);
   }
 
 }

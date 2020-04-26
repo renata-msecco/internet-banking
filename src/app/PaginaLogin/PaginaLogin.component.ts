@@ -18,19 +18,26 @@ placeholderCpf = 'Digite o seu CPF...';
 placeholderSenha = 'Digite sua senha...';
 classInput = 'input';
 submit = 'submit';
-namebutton = 'Entrar';
+titleButton = 'Entrar';
 classButton = 'button';
 classFooter = 'buttonFooter';
 nameFooter = 'Sair';
 logo = ['../../assets/image/logo.png'];
+nameInputCPF = 'nameInputCPF';
+nameInputSenha = 'nameInputSenha';
+nameButton = 'nameButton';
 
   model = new User();
   constructor() { }
 
   ngOnInit(): void {
   }
-
   onSubmit(form) {
     console.log(form.value);
   }
+  clicou(){
+    console.log('clicou');
+  }
 }
+
+
