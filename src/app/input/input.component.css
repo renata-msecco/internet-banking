@@ -1,0 +1,12 @@
+.input{
+    margin: 2vw;
+    background-color: rgb(5, 218, 242);
+    border: 2px solid rgb(5, 218, 242);
+    border-radius: 5px;
+    width: 80vw;
+    height: 18vw;
+    padding: 1vw;
+    color: #ffffff;
+}
+
+/* class PaginaTransferencia */

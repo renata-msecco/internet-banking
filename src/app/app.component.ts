@@ -20,7 +20,9 @@ export class AppComponent {
       console.log(`Dialog result: ${result}`);
     });
 
-
+    // Se CPF e Senha existe no banco de dados mude a rota para HOME e pegue as informações do cliente
+    // Estudar promisses
+    // Se não CPF ou Senha estiver errado Enviei mensagem de erro
   }
   }
 

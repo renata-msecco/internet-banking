@@ -1,4 +1,4 @@
-<form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)" class="form ">
+<!-- <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)" class="form ">
     <div style="display: flex;width: 100%;justify-content: center;">
       <img src="https://raw.githubusercontent.com/renata-msecco/internet-banking-avanade/master/src/app/imagem/logocerto_page-0001-removebg.png" class="img-fluid" >
     </div>
@@ -26,4 +26,23 @@
     <div class="col-auto">
         <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
     </div>
+</form> -->
+
+<form class="form"> 
+<img [src] = "logo" class="img-fluid">
+<app-input 
+[type]="text"
+[placeholder]="placeholderCpf" 
+[class]="classInput"
+></app-input>
+<app-input 
+[type]="password"
+[placeholder]="placeholderSenha" 
+[class]="classInput"
+></app-input>
+<app-button
+[type]="submit"
+[title]="namebutton"
+[class]="classButton"
+></app-button>
 </form>

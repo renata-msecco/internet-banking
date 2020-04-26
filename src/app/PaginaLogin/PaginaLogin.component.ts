@@ -12,6 +12,17 @@ export class User {
 })
 
 export class PaginaLoginComponent implements OnInit {
+text = 'text';
+password = 'password';
+placeholderCpf = 'Digite o seu CPF...';
+placeholderSenha = 'Digite sua senha...';
+classInput = 'input';
+submit = 'submit';
+namebutton = 'Entrar';
+classButton = 'button';
+classFooter = 'buttonFooter';
+nameFooter = 'Sair';
+logo = ['../../assets/image/logo.png'];
 
   model = new User();
   constructor() { }
