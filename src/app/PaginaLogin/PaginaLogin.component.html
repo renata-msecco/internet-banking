@@ -34,15 +34,21 @@
 [type]="text"
 [placeholder]="placeholderCpf" 
 [class]="classInput"
+[nameInput]="nameInputCPF"
 ></app-input>
 <app-input 
 [type]="password"
 [placeholder]="placeholderSenha" 
 [class]="classInput"
+[nameInput]="nameInputSenha"
 ></app-input>
 <app-button
 [type]="submit"
-[title]="namebutton"
+[title]="titleButton"
 [class]="classButton"
+[nameButton]="nameButton"
+(click)="clicou()"
 ></app-button>
 </form>
+
+<!-- (value)="valueCPF($event.target.value)" -->
