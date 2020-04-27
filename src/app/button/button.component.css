@@ -1,14 +1,13 @@
 .button{
-    margin-top: 10%;
     background-color:#F20544;
     border: 2px solid #F20544;
     border-radius: 5px;
-    width: 80vw;
-    height: 18vw;
+    width: 22vw;
+    height: 5vw;
     font-size: 1.5rem;
     color: #ffffff;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 400px) {
     .button {
         width: 80vw;
         height: 18vw;

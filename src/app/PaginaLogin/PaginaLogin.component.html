@@ -29,7 +29,10 @@
 </form> -->
 
 <form class="form">
+    <div class="img">
   <img [src]="logo" class="img-fluid">
+</div>
+  <div class="menu">
   <app-input 
   [type]="text" 
   [placeholder]="placeholderCpf" 
@@ -51,4 +54,5 @@
   [nameButton]="nameButton" 
   (click)="autenticacaoDoUsuario()">
   </app-button>
+</div>
 </form>
