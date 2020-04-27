@@ -1,9 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,13 +28,19 @@ import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransf
     ButtonComponent,
     PaginaExtratoComponent,
     PaginaTransferenciaComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    FormsModule
-  ],
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserModule,
+    RouterModule,
+    FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
