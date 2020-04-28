@@ -64,6 +64,8 @@ export class PaginaLoginComponent implements OnInit {
         if (Object.keys(cliente).length > 1) {
           window.localStorage.setItem('cliente_id', cliente.Id.toString());
           window.localStorage.setItem('cliente_nome', cliente.Nome);
+          window.localStorage.setItem('cliente_agencia', cliente.Agencia);
+          window.localStorage.setItem('cliente_conta', cliente.Conta);
           this.router.navigate(['home']);
         }
         else {
