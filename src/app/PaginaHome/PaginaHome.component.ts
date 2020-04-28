@@ -22,4 +22,8 @@ export class PaginaHomeComponent implements OnInit {
     console.log(this.titleButtonFotter);
   }
 
+  // clientes.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
+  //     console.log(clientes);
+  //   });
+
 }
