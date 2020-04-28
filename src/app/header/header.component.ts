@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  agencia = '123';
-  conta = '12345-6';
+ @Input() agencia: string;
+ @Input() conta: string;
   logo = ['../../assets/image/logo.png'];
 
   constructor() { }
