@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 import { User } from '../models/user';
 
@@ -19,13 +19,16 @@ export class PaginaHomeComponent implements OnInit {
   user: User = null;
   textMain = 'Olá,';
   textMsg = 'Está é sua conta corrente';
-  textSaldo = 'Seu Saldo é: R$450,00';
+  textSaldo = 'Seu Saldo é: ';
   btnTransfer = 'btnTransfer';
   titleBtnTransfer = 'Transferência';
   nameBtnTransfer = 'nameBtnTransfer';
   btnExtra = 'btnExtra';
   nameBtnExtra = 'nameBtnExtra';
   titleBtnExtra = 'Extrato';
+  classNome = 'textNome';
+  textAux = 'textAux';
+  valorSaldo = 'valorSaldo';
 
 
   constructor(
@@ -38,6 +41,7 @@ export class PaginaHomeComponent implements OnInit {
     this.user.Nome = window.localStorage.getItem('cliente_nome');
     this.user.Agencia = window.localStorage.getItem('cliente_agencia');
     this.user.Conta = window.localStorage.getItem('cliente_conta');
+    // this.user.Saldo = Number(window.localStorage.getItem('cliente_saldo'));
     /*
     this.http.get(`https://retro-bank-api.azurewebsites.net\clientes\${this.user.Id}`).subscribe((cliente: User) => {
       this.user = cliente;

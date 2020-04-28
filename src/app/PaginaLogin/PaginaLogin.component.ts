@@ -59,13 +59,14 @@ export class PaginaLoginComponent implements OnInit {
       senha: this.valorSenha,
     }).subscribe((cliente: User) => {
 
-      // tslint:disable-next-line: forin
       try {
         if (Object.keys(cliente).length > 1) {
           window.localStorage.setItem('cliente_id', cliente.Id.toString());
           window.localStorage.setItem('cliente_nome', cliente.Nome);
           window.localStorage.setItem('cliente_agencia', cliente.Agencia);
           window.localStorage.setItem('cliente_conta', cliente.Conta);
+          // window.localStorage.setItem('cliente_saldo', cliente.Saldo.toString());
+          console.log(Number(window.localStorage.getItem('cliente_id')));
           this.router.navigate(['home']);
         }
         else {
@@ -75,6 +76,14 @@ export class PaginaLoginComponent implements OnInit {
         console.log('Erro no sistema, tente novamente mais tarde...');
       }
     });
+  }
+    usuarioLogado(): boolean {
+      return Number(window.localStorage.getItem('cliente_id')) ? true : false;
+    }
+
+
+
+
 
     // this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
     //   const teste = {
@@ -88,7 +97,7 @@ export class PaginaLoginComponent implements OnInit {
     // this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
     //   console.log(clientes);
     // });
-  }
+
 }
 
 
