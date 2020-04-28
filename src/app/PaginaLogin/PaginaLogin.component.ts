@@ -2,12 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
-export class User {
- public cpf: string;
- public password: string;
-
-}
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-login',
@@ -34,9 +29,7 @@ export class PaginaLoginComponent implements OnInit {
   nameButton = 'nameButton';
   valorCPF = '';
   valorSenha = '';
-
-  //model = new User();
-  //routes: any;
+  idUsuario = '';
 
   constructor(
     private http: HttpClient,
@@ -58,36 +51,28 @@ export class PaginaLoginComponent implements OnInit {
   getSenha($event) {
     this.valorSenha = $event.target.value;
     return this.valorSenha;
-
   }
 
   autenticacaoDoUsuario() {
-    console.log('clicou', 'CPF', this.valorCPF, 'SENHA', this.valorSenha);
-
     this.http.post('https://retro-bank-api.azurewebsites.net/clientes/login', {
       cpf: this.valorCPF,
       senha: this.valorSenha,
     }).subscribe((cliente: User) => {
 
-    // tslint:disable-next-line: forin
-    for (const key in cliente) {
-      console.log(cliente[key]);
-    }
-    try{
-      if (Object.keys(cliente).length > 1){
-        this.router.navigate(['home']);
-        console.log('tem cliente', cliente);
+      // tslint:disable-next-line: forin
+      try {
+        if (Object.keys(cliente).length > 1) {
+          window.localStorage.setItem('cliente_id', cliente.Id.toString());
+          window.localStorage.setItem('cliente_nome', cliente.Nome);
+          this.router.navigate(['home']);
+        }
+        else {
+          console.log('Não existe cliente');
+        }
+      } catch {
+        console.log('Erro no sistema, tente novamente mais tarde...');
       }
-      else{
-        console.log('Não tem cliente', cliente);
-      }
-    }catch {
-      console.log('Erro no sistema');
-    }
-
     });
-
-
 
     // this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
     //   const teste = {
