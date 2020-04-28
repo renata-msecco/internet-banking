@@ -5,13 +5,33 @@ import { PaginaExtratoComponent } from './PaginaExtrato/PaginaExtrato.component'
 import { PaginaHomeComponent } from './PaginaHome/PaginaHome.component';
 import { PaginaLoginComponent } from './PaginaLogin/PaginaLogin.component';
 import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransferencia.component';
+import { EstaLogadoGuard } from './shared/guards/logado/esta-logado.guard';
 
-const routes: Routes = [
-    { path: '', component: PaginaLoginComponent},
-    { path: 'login', component: PaginaLoginComponent },
-    { path: 'home', component:  PaginaHomeComponent },
-    { path: 'transferencia', component: PaginaTransferenciaComponent },
-    { path: 'extrato', component: PaginaExtratoComponent },
+//import { NaoEstaLogadoGuard } from './shared/guards/nao-logado/nao-esta-logado.guard';
+
+const routes: Routes = [{
+    path: 'login',
+    component: PaginaLoginComponent,
+   // canActivate: [NaoEstaLogadoGuard],
+}, {
+    path: 'home',
+    component:  PaginaHomeComponent,
+    canActivate: [EstaLogadoGuard],
+}, {
+    path: 'transferencia',
+    component: PaginaTransferenciaComponent,
+    canActivate: [EstaLogadoGuard],
+}, {
+    path: 'extrato',
+    component: PaginaExtratoComponent,
+    canActivate: [EstaLogadoGuard],
+}, //{
+    //pathMatch: '',
+   // component: PaginaLoginComponent,
+//}, {
+   // path: '**',
+   // component: NaoEncontradoComponent,
+
 ];
 
 @NgModule({

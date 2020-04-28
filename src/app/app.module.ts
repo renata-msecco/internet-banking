@@ -17,6 +17,7 @@ import { PaginaHomeComponent } from './PaginaHome/PaginaHome.component';
 import { PaginaLoginComponent } from './PaginaLogin/PaginaLogin.component';
 import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransferencia.component';
 import { TextComponent } from './text/text.component';
+import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TextComponent } from './text/text.component';
     PaginaExtratoComponent,
     PaginaTransferenciaComponent,
     TextComponent,
+    NaoEncontradoComponent,
 
   ],
   imports: [

@@ -1,0 +1,27 @@
+main{
+  display: flex;
+  flex-direction: column;
+  margin: 10vw;  
+  justify-content: space-between;
+  align-items: center;
+  height: 100vw;
+  /* background-color: black; */
+}
+
+.textHome{
+  background-color:yellow;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.textSaldo{
+  background-color:orange;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}

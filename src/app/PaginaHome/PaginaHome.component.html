@@ -1,35 +1,50 @@
 <app-header
-[agencia]='this.user.Agencia'
-[conta]='this.user.Conta'
+  [agencia]='this.user.Agencia'
+  [conta]='this.user.Conta'
 ></app-header>
-<app-text
-[text]='textMain'
-[nome]='this.user.Nome'
-></app-text>
-<app-text
-[text]='textMsg'
-></app-text>
-<app-text
-[text]='textSaldo'
-></app-text>
-<app-button
-[class]='btnTransfer'
-[name]='nameBtnTransfer'
-[title]='titleBtnTransfer'
-[type]='submit'
-(click)='showTransfer()'
-></app-button>
-<app-button
-[class]='btnExtra'
-[name]='nameBtnExtra'
-[title]='titleBtnExtra'
-[type]='submit'
-(click)='showExtra()'
-></app-button>
+<main>
+  <div class="textHome">
+    <app-text
+      [text]='textMain'
+      [class]='classNome'
+      [nome]='this.user.Nome'
+    ></app-text>
+    <app-text
+      [class]='textAux'
+      [text]='textMsg'
+    ></app-text>
+  </div>
+  <div class="textSaldo">
+    <app-text
+      [class]='textAux'
+      [text]='textSaldo'
+    ></app-text>
+ </div>
+ <div class="styleValor">
+   <app-text
+    [class]='valorSaldo'
+    [text]='this.user.Saldo'
+   ></app-text>
+ </div>
+  <app-button
+  [class]='btnTransfer'
+  [name]='nameBtnTransfer'
+  [title]='titleBtnTransfer'
+  [type]='submit'
+  (click)='showTransfer()'
+  ></app-button>
+  <app-button
+  [class]='btnExtra'
+  [name]='nameBtnExtra'
+  [title]='titleBtnExtra'
+  [type]='submit'
+  (click)='showExtra()'
+  ></app-button>
+</main>
 <app-footer
-[class]='classFooter'
-[nameButton]='nameButtonFooter'
-[title]='titleButtonFotter'
-[type]='submit'
-(click)='clicou()'
+  [class]='classFooter'
+  [nameButton]='nameButtonFooter'
+  [title]='titleButtonFotter'
+  [type]='submit'
+  (click)='clicou()'
 ></app-footer>
