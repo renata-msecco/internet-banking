@@ -6,4 +6,6 @@ export class User {
     public Agencia: string;
     public Conta: string;
     public SaldoI: number;
+    public Destinatario: string;
+    public IdDestinatario: number;
 }

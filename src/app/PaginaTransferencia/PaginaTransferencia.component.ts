@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { User } from '../models/user';
 
@@ -34,8 +36,17 @@ export class PaginaTransferenciaComponent implements OnInit {
   textDaAgencia = 'Digite a agência:';
   textDaConta = 'Digite o número da conta:';
   styleText = 'styleText';
+  destinatarioAgencia = '';
+  destinatarioConta = '';
+  idDestinatario = '';
+  nomeDestinatario = '';
 
-  constructor() { }
+
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+
+  ) { }
 
   ngOnInit(): void {
     this.user = new User();
@@ -46,11 +57,36 @@ export class PaginaTransferenciaComponent implements OnInit {
   }
 
   Home() {
-    console.log('osdsdsdii');
+    this.router.navigate(['home']);
   }
 
-  ProxTransf(){
-    console.log('sdii');
+  getAgencia($event) {
+    this.destinatarioAgencia = $event.target.value;
+    return this.destinatarioAgencia;
   }
 
+  getConta($event) {
+    this.destinatarioConta = $event.target.value;
+    return this.destinatarioConta;
+  }
+
+  ProxTransf() {
+    this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
+      console.log(clientes);
+
+      clientes.forEach(element => {
+        if (element.Conta == this.destinatarioConta) {
+          this.idDestinatario = element.Id.toString();
+          this.nomeDestinatario = element.Nome;
+          window.localStorage.setItem('destinatario_id', this.idDestinatario.toString());
+          window.localStorage.setItem('destinatario_nome', this.nomeDestinatario);
+          this.router.navigate(['confirmatransferencia']);
+        }
+         else {
+          console.log('Não deu');
+        }
+      });
+    });
+  }
 }
+

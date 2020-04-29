@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirma-transf',
@@ -24,7 +25,9 @@ export class ConfirmaTransfComponent implements OnInit {
   titleBtnAnt = 'Anterior';
 
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.user = new User();
@@ -32,18 +35,20 @@ export class ConfirmaTransfComponent implements OnInit {
     this.user.Nome = window.localStorage.getItem('cliente_nome');
     this.user.Agencia = window.localStorage.getItem('cliente_agencia');
     this.user.Conta = window.localStorage.getItem('cliente_conta');
+    this.user.Destinatario = window.localStorage.getItem('destinatario_nome');
+    this.user.IdDestinatario = Number(window.localStorage.getItem('destinatario_id'));
   }
 
   Home() {
-    console.log('osdsdsdii');
+    this.router.navigate(['home']);
   }
 
   NoTransf(){
-    console.log('osdsdsdii');
+    this.router.navigate(['transferencia']);
   }
 
   YesTransf(){
-    console.log('osdsdsdii');
+    this.router.navigate(['xxxxxxxxxx']);
   }
 
 }

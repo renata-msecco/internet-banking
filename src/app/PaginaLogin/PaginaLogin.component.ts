@@ -69,6 +69,7 @@ export class PaginaLoginComponent implements OnInit {
         }
         else {
           console.log('Não existe cliente');
+          window.localStorage.setItem('cliente_id', cliente.Id.toString());
         }
       }
       catch {
