@@ -25,6 +25,14 @@ main{
   justify-content: flex-start;
   
 }
+
+
+.btn{
+
+   background-color: #05DBF2;
+} 
+
+
 .styleValor{
   display: flex;
   flex-direction: column;
