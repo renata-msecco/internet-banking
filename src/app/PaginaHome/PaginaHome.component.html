@@ -1,6 +1,6 @@
 <app-header
-  [agencia]='this.user.Agencia'
-  [conta]='this.user.Conta'
+[agencia]='this.user.Agencia'
+[conta]='this.user.Conta'
 ></app-header>
 <main>
   <div class="textHome">
@@ -14,7 +14,7 @@
       [text]='textMsg'
     ></app-text>
   </div>
-  <div class="textSaldo">
+  <div class="textSaldo" >
     <app-text
       [class]='textAux'
       [text]='textSaldo'
@@ -26,14 +26,14 @@
     [text]='this.user.Saldo'
    ></app-text>
  </div>
-  <app-button
+  <app-button class="btn btn-lg btn-block"
   [class]='btnTransfer'
   [name]='nameBtnTransfer'
   [title]='titleBtnTransfer'
   [type]='submit'
   (click)='showTransfer()'
   ></app-button>
-  <app-button
+  <app-button class="btn btn-lg btn-block"
   [class]='btnExtra'
   [name]='nameBtnExtra'
   [title]='titleBtnExtra'
