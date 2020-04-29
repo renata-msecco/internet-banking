@@ -31,6 +31,7 @@ export class PaginaHomeComponent implements OnInit {
   textAux = 'textAux';
   valorSaldo = 'valorSaldo';
   teste = 500;
+
   // saldoInConta = this.getSaldo();
 
 

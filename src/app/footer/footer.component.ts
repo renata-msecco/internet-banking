@@ -10,6 +10,8 @@ export class FooterComponent implements OnInit {
   @Input() class: string;
   @Input() title: string;
   @Input() nameButton: string;
+  @Input() titleBtn: string;
+  @Input () nameBtn: string;
   @Output() clickButton = new EventEmitter();
 
   constructor() { }
