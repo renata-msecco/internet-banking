@@ -1,3 +1,57 @@
+<!-- <app-header
+[agencia]='this.user.Agencia'
+[conta]='this.user.Conta'
+></app-header>
+<main>
+  <div class="textHome">
+    <app-text
+      [text]='textMain'
+      [class]='classNome'
+      [nome]='this.user.Nome'
+    ></app-text>
+    <app-text
+      [class]='textAux'
+      [text]='textMsg'
+    ></app-text>
+  </div> -->
+  <!-- <div class="textSaldo" > -->
+  <!-- Verificar o lugar correto desta div -->
+  <!-- <div class='flexValor'>
+  <div class="textSaldo">
+    <app-text
+      [class]='textAux'
+      [text]='textSaldo'
+    ></app-text>
+ </div>
+ <div class="styleValor">
+   <app-text
+    [class]='valorSaldo'
+    [text]='teste'
+   ></app-text>
+ </div>
+  <app-button class="btn btn-lg btn-block"
+  [class]='btnTransfer'
+  [name]='nameBtnTransfer'
+  [title]='titleBtnTransfer'
+  [type]='submit'
+  (click)='showTransfer()'
+  ></app-button>
+  <app-button class="btn btn-lg btn-block"
+  [class]='btnExtra'
+  [name]='nameBtnExtra'
+  [title]='titleBtnExtra'
+  [type]='submit'
+  (click)='showExtra()'
+  ></app-button>
+</main>
+<app-footer
+  [class]='classFooter'
+  [nameButton]='nameButtonFooter'
+  [title]='titleButtonFotter'
+  [type]='submit'
+  (click)='clicou()'
+></app-footer> -->
+
 <app-header
   [agencia]='this.user.Agencia'
   [conta]='this.user.Conta'
@@ -24,7 +78,7 @@
  <div class="styleValor">
    <app-text
     [class]='valorSaldo'
-    [text]='teste'
+    [text]='saldoInConta'
    ></app-text>
  </div>
 </div>

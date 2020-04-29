@@ -27,6 +27,10 @@ main{
   margin-bottom: 20px;
   
 }
+
+
+
+
 .styleValor{
   display: flex;
   flex-direction: column;
@@ -45,6 +49,7 @@ main{
   width: 70px;
 }
 
+
 .btn{
   width: 250px;
   height: 60px;
@@ -58,3 +63,4 @@ main{
   margin-top: 70px;
   
 }
+

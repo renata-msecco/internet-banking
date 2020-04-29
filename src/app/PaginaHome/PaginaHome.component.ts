@@ -29,10 +29,7 @@ export class PaginaHomeComponent implements OnInit {
   classNome = 'textNome';
   textAux = 'textAux';
   valorSaldo = 'valorSaldo';
-  teste = 500;
-
-  // saldoInConta = this.getSaldo();
-
+  saldoInConta = 0;
 
   constructor(
     private router: Router,
@@ -40,19 +37,22 @@ export class PaginaHomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.user = new User();
-    this.user.Id = Number(window.localStorage.getItem('cliente_id'));
-    this.user.Nome = window.localStorage.getItem('cliente_nome');
-    this.user.Agencia = window.localStorage.getItem('cliente_agencia');
-    this.user.Conta = window.localStorage.getItem('cliente_conta');
+    this.getUser();
+    // this.user = new User();
+    // this.user.Id = Number(window.localStorage.getItem('cliente_id'));
+    // this.user.Nome = window.localStorage.getItem('cliente_nome');
+    // this.user.Agencia = window.localStorage.getItem('cliente_agencia');
+    // this.user.Conta = window.localStorage.getItem('cliente_conta');
   }
 
-  // getSaldo() {
-  //   this.http.get(`https://retro-bank-api.azurewebsites.net/clientes/${this.user.Id}`).subscribe((cliente: User) => {
-  //     this.user = cliente;
-  //     return cliente.SaldoI;
-  //   });
-  // }
+  getUser() {
+    const userId = window.localStorage.getItem('cliente_id');
+    this.http.get(`https://retro-bank-api.azurewebsites.net/clientes/${userId}`).subscribe((cliente: User) => {
+       this.user = cliente;
+       this.saldoInConta = cliente.SaldoI.toFixed(2);
+    });
+  }
+
 
   clicou() {
     console.log(this.user.SaldoI);
