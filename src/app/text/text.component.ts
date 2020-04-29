@@ -8,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TextComponent implements OnInit {
   @Input() nome: string;
   @Input() text: string;
-  @Input() textMsg: string;
   @Input() class: string;
+  @Input() name: string;
+  @Input() textMessage: string;
+  @Input() textMain: string;
 
   constructor() { }
 

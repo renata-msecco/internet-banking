@@ -11,7 +11,6 @@
     ></app-text>
     <app-text
       [class]='textAux'
-      [text]='textMsg'
     ></app-text>
   </div>
   <!-- Verificar o lugar correto desta div -->
@@ -29,20 +28,20 @@
    ></app-text>
  </div>
 </div>
-  <app-button
-  [class]='btnTransfer'
+<div class='btnPageHome'>
+  <app-button class="btn btn-info"
   [name]='nameBtnTransfer'
   [title]='titleBtnTransfer'
   [type]='submit'
   (click)='showTransfer()'
   ></app-button>
-  <app-button
-  [class]='btnExtra'
+  <app-button class="btn btn-info"
   [name]='nameBtnExtra'
   [title]='titleBtnExtra'
   [type]='submit'
   (click)='showExtra()'
   ></app-button>
+</div>
 </main>
 <app-footer
   [class]='classFooter'

@@ -18,6 +18,7 @@ import { PaginaLoginComponent } from './PaginaLogin/PaginaLogin.component';
 import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransferencia.component';
 import { TextComponent } from './text/text.component';
 import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
+import { ConfirmaTransfComponent } from './confirma-transf/confirma-transf.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.componen
     PaginaTransferenciaComponent,
     TextComponent,
     NaoEncontradoComponent,
+    ConfirmaTransfComponent,
 
   ],
   imports: [

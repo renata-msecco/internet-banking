@@ -19,8 +19,7 @@ export class PaginaHomeComponent implements OnInit {
   nameButtonFooter = 'nameButtonFooter';
   user: User = null;
   textMain = 'Olá,';
-  textMsg = 'Está é sua conta corrente';
-  textSaldo = 'Seu Saldo é: ';
+  textSaldo = 'Seu saldo em conta corrente é: ';
   btnTransfer = 'btnTransfer';
   titleBtnTransfer = 'Transferência';
   nameBtnTransfer = 'nameBtnTransfer';
