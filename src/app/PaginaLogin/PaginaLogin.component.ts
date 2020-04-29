@@ -39,9 +39,9 @@ export class PaginaLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit(form) {
-    console.log(form.value);
-  }
+  // onSubmit(form) {
+  //   console.log(form.value);
+  // }
 
   getCPF($event) {
     this.valorCPF = $event.target.value;
@@ -65,14 +65,14 @@ export class PaginaLoginComponent implements OnInit {
           window.localStorage.setItem('cliente_nome', cliente.Nome);
           window.localStorage.setItem('cliente_agencia', cliente.Agencia);
           window.localStorage.setItem('cliente_conta', cliente.Conta);
-          // window.localStorage.setItem('cliente_saldo', cliente.Saldo.toString());
           console.log(Number(window.localStorage.getItem('cliente_id')));
           this.router.navigate(['home']);
         }
         else {
           console.log('Não existe cliente');
         }
-      } catch {
+      }
+      catch {
         console.log('Erro no sistema, tente novamente mais tarde...');
       }
     });
@@ -80,11 +80,6 @@ export class PaginaLoginComponent implements OnInit {
     usuarioLogado(): boolean {
       return Number(window.localStorage.getItem('cliente_id')) ? true : false;
     }
-
-
-
-
-
     // this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
     //   const teste = {
     //      cliente: clientes
@@ -97,7 +92,6 @@ export class PaginaLoginComponent implements OnInit {
     // this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
     //   console.log(clientes);
     // });
-
 }
 
 
