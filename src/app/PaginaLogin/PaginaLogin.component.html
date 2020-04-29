@@ -30,29 +30,29 @@
 
 <form class="form">
     <div class="img">
-  <img [src]="logo" class="img-fluid">
-</div>
+     <img [src]="logo" class="img-fluid">
+    </div>
   <div class="menu">
-  <app-input 
-  [type]="text" 
-  [placeholder]="placeholderCpf" 
-  [class]="classInput" 
-  [nameInput]="nameInputCPF"
-  (keyup)="getCPF($event)"
-  ></app-input>
-  <app-input 
-  [type]="password" 
-  [placeholder]="placeholderSenha" 
-  [class]="classInput" 
-  [nameInput]="nameInputSenha"
-  (keyup)="getSenha($event)"
-  ></app-input>
-  <app-button 
-  [type]="submit" 
-  [title]="titleButton" 
-  [class]="classButton" 
-  [nameButton]="nameButton" 
-  (click)="autenticacaoDoUsuario()">
-  </app-button>
+    <app-input 
+        [type]="text" 
+        [placeholder]="placeholderCpf" 
+        [class]="classInput" 
+        [nameInput]="nameInputCPF"
+        (keyup)="getCPF($event)"
+    ></app-input>
+    <app-input 
+        [type]="password" 
+        [placeholder]="placeholderSenha" 
+        [class]="classInput" 
+        [nameInput]="nameInputSenha"
+        (keyup)="getSenha($event)"
+    ></app-input>
+    <app-button 
+        [type]="submit" 
+        [title]="titleButton" 
+        [class]="classButton" 
+        [nameButton]="nameButton" 
+        (click)="autenticacaoDoUsuario()">
+    </app-button>
 </div>
 </form>

@@ -1,0 +1,17 @@
+.main{
+    margin-top: 70px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.campoAgencia{
+   
+    margin-bottom: 20px;
+    
+}
+
+.campoConta{
+    margin-bottom: 20px;
+}
