@@ -16,9 +16,9 @@ export class PaginaTransferenciaComponent implements OnInit {
   titleButtonFotter = 'Sair';
   titleBtnFotter = 'Home';
   submit = 'submit';
-  textMain = 'Olá,';
+  textOla = 'Olá,';
   textMsg = 'Faça uma transferência';
-  classNome = 'textNome';
+  classNome = 'textName';
   textAux = 'textAux';
   classFooterTransf = 'footerTransf';
   textAgencia = 'textAgencia';
@@ -31,8 +31,9 @@ export class PaginaTransferenciaComponent implements OnInit {
   titleBtnProx = 'Próximo';
   classButton = 'classButton';
   nameBtnProx = 'nameBtnProx';
-  textDaAgencia = 'Digite sua agência:';
-  textDaConta = 'Digite o número da sua conta:';
+  textDaAgencia = 'Digite a agência:';
+  textDaConta = 'Digite o número da conta:';
+  styleText = 'styleText';
 
   constructor() { }
 

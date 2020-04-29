@@ -7,6 +7,8 @@
     font-size: 1.5rem;
     color: #ffffff;
 }
+
+
 @media screen and (max-width: 400px) {
     .button {
         width: 80vw;

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ConfirmaTransfComponent } from './confirma-transf/confirma-transf.component';
 import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 import { PaginaExtratoComponent } from './PaginaExtrato/PaginaExtrato.component';
 import { PaginaHomeComponent } from './PaginaHome/PaginaHome.component';
@@ -19,6 +20,10 @@ const routes: Routes = [{
 }, {
     path: 'transferencia',
     component: PaginaTransferenciaComponent,
+    canActivate: [EstaLogadoGuard],
+}, {
+    path: 'confirmatransferencia',
+    component: ConfirmaTransfComponent,
     canActivate: [EstaLogadoGuard],
 }, {
     path: 'extrato',

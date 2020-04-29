@@ -3,9 +3,9 @@
   [conta]='this.user.Conta'
 ></app-header>
 <main>
-  <div class="textHome">
+  <div>
     <app-text
-      [text]='textMain'
+      [text]='textOla'
       [class]='classNome'
       [nome]='this.user.Nome'
     ></app-text>
@@ -15,37 +15,38 @@
     ></app-text>
   </div>
 
-  <form class="form">
-    <div class="main">
+  <form>
+    <div class='main'>
       <div class='campoAgencia'>
         <app-text
+        [class]='styleText'
         [text]='textDaAgencia'
         ></app-text>
         <app-input 
-          [type]="textAgencia" 
-          [placeholder]="placeholderAgencia" 
-          [class]="classInput" 
-          [nameInput]="nameInputAgencia"
+          [type]='textAgencia' 
+          [placeholder]='placeholderAgencia' 
+          [class]='classInput' 
+          [nameInput]='nameInputAgencia'
         ></app-input>
       </div> 
       <div class='campoConta'>
         <app-text
+        [class]='styleText'
         [text]='textDaConta'
         ></app-text>
         <app-input 
-          [type]="textConta" 
-          [placeholder]="placeholderConta" 
-          [class]="classInput" 
-          [nameInput]="nameInputConta"
+          [type]='textConta'
+          [placeholder]='placeholderConta' 
+          [class]='classInput'
+          [nameInput]='nameInputConta'
         ></app-input>
       </div>
-      <app-button 
-        [type]="submit" 
-        [title]="titleBtnProx" 
-        [class]="classButton" 
-        [nameButton]="nameBtnProx" 
-        (click)="ProxTransf()">
-      </app-button>
+        <app-button class='btn btn-info'
+          [type]='submit' 
+          [title]='titleBtnProx' 
+          [nameButton]='nameBtnProx' 
+          (click)='ProxTransf()'>
+        </app-button>
     </div>
   </form>
 
