@@ -1,8 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.css";
-/* .body{
-font-family: Roboto;
-font-style: normal;
-color: blueviolet;
+ 
+body{
+    margin:0;
 }
-  */

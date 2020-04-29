@@ -5,5 +5,5 @@ export class User {
     public Nome: string;
     public Agencia: string;
     public Conta: string;
-    public Saldo: number;
+    public SaldoI: number;
 }
