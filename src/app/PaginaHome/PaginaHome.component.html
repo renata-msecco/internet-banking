@@ -1,6 +1,6 @@
 <app-header
-  [agencia]='this.user.Agencia'
-  [conta]='this.user.Conta'
+[agencia]='this.user.Agencia'
+[conta]='this.user.Conta'
 ></app-header>
 <main>
   <div class="textHome">
@@ -14,6 +14,7 @@
       [text]='textMsg'
     ></app-text>
   </div>
+  <div class="textSaldo" >
   <!-- Verificar o lugar correto desta div -->
   <div class='flexValor'>
   <div class="textSaldo">
@@ -28,6 +29,7 @@
     [text]='teste'
    ></app-text>
  </div>
+  <app-button class="btn btn-lg btn-block"
 </div>
   <app-button
   [class]='btnTransfer'
@@ -36,7 +38,7 @@
   [type]='submit'
   (click)='showTransfer()'
   ></app-button>
-  <app-button
+  <app-button class="btn btn-lg btn-block"
   [class]='btnExtra'
   [name]='nameBtnExtra'
   [title]='titleBtnExtra'
