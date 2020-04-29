@@ -27,6 +27,7 @@
           [placeholder]='placeholderAgencia' 
           [class]='classInput' 
           [nameInput]='nameInputAgencia'
+          (keyup)="getAgencia($event)"
         ></app-input>
       </div> 
       <div class='campoConta'>
@@ -39,6 +40,7 @@
           [placeholder]='placeholderConta' 
           [class]='classInput'
           [nameInput]='nameInputConta'
+          (keyup)="getConta($event)"
         ></app-input>
       </div>
         <app-button class='btn btn-info'
