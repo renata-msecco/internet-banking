@@ -1,12 +1,27 @@
 .textNome{
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #276983;
     margin: 0;
-
+    width: 80vw;
+    background-color: darkseagreen;
 }
 
 .textAux{
+    background-color: deeppink;
+    background-color: darkviolet;
     color: #276983;
+    margin: 0;   
+    width: 250px;
+    padding: 0;
+}
+
+.valorSaldo {
+    color: #276983;
+    margin: 0;   
+    font-size: 2rem; 
+    width: 70px;
+}
+
+app-text{
     margin: 0;
-    
 }
