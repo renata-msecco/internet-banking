@@ -2,7 +2,59 @@
   [agencia]='this.user.Agencia'
   [conta]='this.user.Conta'
 ></app-header>
-
+<main>
+  <app-text
+    [text]='textMsg'
+    [class]='classNome'
+  ></app-text>
+  <div class='main'>
+    <app-text 
+    [textComprovante]='textComprovante'
+    [class]='classNome'
+  ></app-text>
+  <app-text class='dadosBancarios'
+  [textEm]='textEm'
+  [transfData]='transfData'
+  ></app-text>
+  <app-text class='dadosBancarios'
+    [text]='textDe'
+    [nome]='this.user.Nome'
+  ></app-text>
+  <app-text class='dadosBancarios'
+    [textAgencia]='textAgencia'
+    [agencia]='this.user.Agencia'
+    [textConta]='textConta'
+    [conta]='this.user.Conta'
+  ></app-text>
+  <app-text class='dadosBancarios'
+    [textValor]='textValor'
+  ></app-text>
+  <div class='space'>
+  </div>
+  <app-text class='dadosBancarios'
+  [textPara]='textPara'
+  [nomeDestinatario]='this.user.Destinatario'
+  ></app-text>
+  <app-text class='dadosBancarios'
+    [textAgDestinatario]='textAgDestinatario'
+    [agenciaDestinatario]='this.user.IdDestinatario' 
+    [textContaDestinatario]='textContaDestinatario'
+    [contaDestinatario]='this.user.IdDestinatario'
+  ></app-text>
+  <app-text class='dadosBancarios'
+    [textCpfDest]='textCpfDest'
+    [cpfDestinatario]='this.user.IdDestinatario'
+  ></app-text>
+  </div>
+  <div class='btnSalvar'>
+    <app-button class='btn btn-info'
+      [type]='submit' 
+      [title]='titleBtnProx' 
+      [nameButton]='nameBtnProx' 
+      (click)='Salvar()'>
+    </app-button>
+  </div>
+</main>
 <app-footer
   [class]='classFooter'
   [nameBtn]='nameBtnFooter'

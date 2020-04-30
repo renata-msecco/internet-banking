@@ -30,6 +30,7 @@ export class PaginaHomeComponent implements OnInit {
   textAux = 'textAux';
   valorSaldo = 'valorSaldo';
   saldoInConta = null;
+  cifrao = 'R$';
 
   constructor(
     private router: Router,
