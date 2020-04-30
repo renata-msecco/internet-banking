@@ -1,1 +1,30 @@
-<p>pagina-extrato works!</p>
+<app-header
+  [agencia]='this.user.Agencia'
+  [conta]='this.user.Conta'
+></app-header>
+<main>
+  <app-text
+    [class]='classNome'
+    [text]='Extrato'
+  ></app-text>
+  <div class="extrato">
+    <app-text class="data"
+      [textEm]='textData'
+      [transfData]='transfData'
+    ></app-text>
+    <app-text class="valor"
+      [valorText]='textValor'
+      [valor]='valor'
+    ></app-text>
+    <app-text class="descricao"
+      [text]='descricao'
+    ></app-text>
+  </div>
+</main>
+<app-footer
+  [class]='classFooter'
+  [nameBtn]='nameBtnFooter'
+  [titleBtn]='titleBtnFotter'
+  [type]='submit'
+  (click)='Home()'
+></app-footer>

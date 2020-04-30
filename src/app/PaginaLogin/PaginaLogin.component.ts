@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 import { User } from '../models/user';
 
@@ -34,7 +35,7 @@ export class PaginaLoginComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-
+    private toastr: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -42,6 +43,7 @@ export class PaginaLoginComponent implements OnInit {
   // onSubmit(form) {
   //   console.log(form.value);
   // }
+
 
   getCPF($event) {
     this.valorCPF = $event.target.value;
@@ -68,7 +70,7 @@ export class PaginaLoginComponent implements OnInit {
           this.router.navigate(['home']);
         }
         else {
-          console.log('Não existe cliente');
+          this.toastr.error('Usuário ou senha inválidos');
           window.localStorage.setItem('cliente_id', cliente.Id.toString());
         }
       }
