@@ -12,6 +12,10 @@ export class TextComponent implements OnInit {
   @Input() name: string;
   @Input() textMessage: string;
   @Input() textMain: string;
+  @Input() textTransf: string;
+  @Input() textValor: number;
+  @Input() textPara: string;
+  @Input() nomeDestinatario: string;
 
   constructor() { }
 

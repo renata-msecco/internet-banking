@@ -1,1 +1,43 @@
-<p>transferindo works!</p>
+<app-header
+  [agencia]='this.user.Agencia'
+  [conta]='this.user.Conta'
+></app-header>
+<main class='mainTransferindo'>
+  <app-text
+  [textTransf]='textMain'
+  [class]='textMainTransf'
+  ></app-text>
+  <app-text
+  [class]='textMainTransf'
+  [textValor]='textValor'
+  ></app-text>
+  <app-text
+  [class]='textMainTransf'
+  [textPara]='textMsg'
+  ></app-text>
+  <app-text
+  [nomeDestinatario]='this.user.Destinatario'
+  [class]='textMainTransf'
+></app-text>
+</main>
+<div class='btnStyle'>
+  <app-button class='btn btn-danger'
+    [type]='submit' 
+    [title]='titleBtnAnt' 
+    [nameButton]='nameBtnProx' 
+    (click)='NoTransf()'>
+  </app-button>
+  <app-button class='btn btn-info'
+    [type]='submit' 
+    [title]='titleBtnProx' 
+    [nameButton]='nameBtnProx' 
+    (click)='YesTransf()'>
+  </app-button>
+</div>
+<app-footer
+  [class]='classFooter'
+  [nameBtn]='nameBtnFooter'
+  [titleBtn]='titleBtnFotter'
+  [type]='submit'
+  (click)='Home()'
+></app-footer>

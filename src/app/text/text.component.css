@@ -49,7 +49,7 @@
 .nomeDestinatario{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: rgb(5, 218, 242);
     color: #276983;
     font-weight: bold;
@@ -77,6 +77,11 @@
     margin-top: 30px;
 }
 
+.textMainTransf{
+    color: #276983;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
 
 
 app-text{

@@ -1,0 +1,13 @@
+.mainTransferindo{
+    background-color: rgb(5, 218, 242);
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 90px;
+}
+
+.btnStyle{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 110px;
+}

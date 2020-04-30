@@ -4,25 +4,17 @@ import { Router } from '@angular/router';
 import { User } from '../models/user';
 
 @Component({
-  selector: 'app-transferindo',
-  templateUrl: './transferindo.component.html',
-  styleUrls: ['./transferindo.component.css']
+  selector: 'app-transferencia-sucesso',
+  templateUrl: './transferencia-sucesso.component.html',
+  styleUrls: ['./transferencia-sucesso.component.css']
 })
-export class TransferindoComponent implements OnInit {
+export class TransferenciaSucessoComponent implements OnInit {
 
   user: User = null;
   classFooter = 'buttonFooter';
   nameBtnFooter = 'nameBtnFooter';
   titleBtnFotter = 'Home';
   submit = 'submit';
-  nomeDestinatario = 'nomeDestinatario';
-  textMain = 'Você está transferindo:';
-  textMsg = 'Para:';
-  textValor = 'R$ 100,00';
-  textMainTransf = 'textMainTransf';
-  titleBtnAnt = 'Cancelar';
-  nameBtnProx = 'nameBtnProx';
-  titleBtnProx = 'Confirmar';
 
   constructor(
     private router: Router,
@@ -42,11 +34,4 @@ export class TransferindoComponent implements OnInit {
     this.router.navigate(['home']);
   }
 
-  NoTransf(){
-    this.router.navigate(['trasferenciaValor']);
-  }
-
-  YesTransf(){
-    this.router.navigate(['trasferSucesso']);
-  }
 }
