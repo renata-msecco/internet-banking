@@ -26,6 +26,7 @@ export class TransferenciaValorComponent implements OnInit {
   nameBtnProx = 'nameBtnProx';
   titleBtnProx = 'Próximo';
 
+
   constructor(
 
     private router: Router,
@@ -51,6 +52,6 @@ export class TransferenciaValorComponent implements OnInit {
   }
 
   YesTransf(){
-    this.router.navigate(['ffffffff']);
+    this.router.navigate(['trasferindo']);
   }
 }

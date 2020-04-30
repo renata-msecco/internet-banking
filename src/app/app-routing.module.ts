@@ -8,7 +8,9 @@ import { PaginaHomeComponent } from './PaginaHome/PaginaHome.component';
 import { PaginaLoginComponent } from './PaginaLogin/PaginaLogin.component';
 import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransferencia.component';
 import { EstaLogadoGuard } from './shared/guards/logado/esta-logado.guard';
+import { TransferenciaSucessoComponent } from './transferencia-sucesso/transferencia-sucesso.component';
 import { TransferenciaValorComponent } from './transferencia-valor/transferencia-valor.component';
+import { TransferindoComponent } from './transferindo/transferindo.component';
 
 const routes: Routes = [{
     path: 'login',
@@ -29,6 +31,14 @@ const routes: Routes = [{
 }, {
     path: 'trasferenciaValor',
     component: TransferenciaValorComponent,
+    canActivate: [EstaLogadoGuard],
+}, {
+    path: 'trasferindo',
+    component: TransferindoComponent,
+    canActivate: [EstaLogadoGuard],
+}, {
+    path: 'trasferSucesso',
+    component: TransferenciaSucessoComponent,
     canActivate: [EstaLogadoGuard],
 }, {
     path: 'extrato',

@@ -21,6 +21,7 @@ import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.componen
 import { ConfirmaTransfComponent } from './confirma-transf/confirma-transf.component';
 import { TransferenciaValorComponent } from './transferencia-valor/transferencia-valor.component';
 import { TransferindoComponent } from './transferindo/transferindo.component';
+import { TransferenciaSucessoComponent } from './transferencia-sucesso/transferencia-sucesso.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TransferindoComponent } from './transferindo/transferindo.component';
     ConfirmaTransfComponent,
     TransferenciaValorComponent,
     TransferindoComponent,
+    TransferenciaSucessoComponent,
 
   ],
   imports: [
