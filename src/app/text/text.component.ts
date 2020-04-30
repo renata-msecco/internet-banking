@@ -31,6 +31,9 @@ export class TextComponent implements OnInit {
   @Input() textCpfDest: string;
   @Input() textCifrao: string;
   @Input() textSaldo: string;
+  @Input() valor: string;
+  @Input() valorText: string;
+
 
 
   constructor() { }

@@ -85,6 +85,14 @@
     font-size: 1.6rem;
 }
 
+.textExtrato{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #276983;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
 p{
     margin-bottom: 0;
 }
