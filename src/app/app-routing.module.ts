@@ -8,6 +8,7 @@ import { PaginaHomeComponent } from './PaginaHome/PaginaHome.component';
 import { PaginaLoginComponent } from './PaginaLogin/PaginaLogin.component';
 import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransferencia.component';
 import { EstaLogadoGuard } from './shared/guards/logado/esta-logado.guard';
+import { TransferenciaValorComponent } from './transferencia-valor/transferencia-valor.component';
 
 const routes: Routes = [{
     path: 'login',
@@ -24,6 +25,10 @@ const routes: Routes = [{
 }, {
     path: 'confirmatransferencia',
     component: ConfirmaTransfComponent,
+    canActivate: [EstaLogadoGuard],
+}, {
+    path: 'trasferenciaValor',
+    component: TransferenciaValorComponent,
     canActivate: [EstaLogadoGuard],
 }, {
     path: 'extrato',

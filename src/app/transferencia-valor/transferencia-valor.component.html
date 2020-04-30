@@ -1,0 +1,41 @@
+<app-header
+  [agencia]='this.user.Agencia'
+  [conta]='this.user.Conta'
+></app-header>
+<main>
+    <app-text
+      [text]='textMsg'
+      [class]='classNome'
+      [nome]='this.user.Destinatario'
+    ></app-text>
+    <form>
+        <app-input 
+          [type]='textValor' 
+          [placeholder]='placeholderValor' 
+          [class]='classInput' 
+          [nameInput]='nameInputValor'
+        ></app-input>
+    </form>
+    <div class='btnStyle'>
+        <app-button class='btn btn-danger'
+          [type]='submit' 
+          [title]='titleBtnAnt' 
+          [nameButton]='nameBtnProx' 
+          (click)='NoTransf()'>
+        </app-button>
+        <app-button class='btn btn-info'
+          [type]='submit' 
+          [title]='titleBtnProx' 
+          [nameButton]='nameBtnProx' 
+          (click)='YesTransf()'>
+        </app-button>
+    </div>
+</main>
+
+<app-footer
+  [class]='classFooter'
+  [nameBtn]='nameBtnFooter'
+  [titleBtn]='titleBtnFotter'
+  [type]='submit'
+  (click)='Home()'
+></app-footer>
