@@ -11,11 +11,12 @@ import { EstaLogadoGuard } from './shared/guards/logado/esta-logado.guard';
 import { TransferenciaSucessoComponent } from './transferencia-sucesso/transferencia-sucesso.component';
 import { TransferenciaValorComponent } from './transferencia-valor/transferencia-valor.component';
 import { TransferindoComponent } from './transferindo/transferindo.component';
+import { NaoEstaLogadoGuard } from './shared/guards/nao-logado/nao-esta-logado.guard';
 
 const routes: Routes = [{
     path: 'login',
     component: PaginaLoginComponent,
-    // canActivate: [NaoEstaLogadoGuard],
+    canActivate: [NaoEstaLogadoGuard],
 }, {
     path: 'home',
     component:  PaginaHomeComponent,

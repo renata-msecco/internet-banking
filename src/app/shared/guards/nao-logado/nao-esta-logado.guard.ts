@@ -11,14 +11,10 @@ export class NaoEstaLogadoGuard implements CanActivate {
 
   canActivate(): boolean{
 
-    if (Number(window.localStorage.getItem('cliente_id'))){
-      this.router.navigate(['home']);
-      console.log(true);
+    if (Number(!window.localStorage.getItem('cliente_id'))){
       return  true;
     }
-
+    this.router.navigate(['home']);
     return false;
-    console.log(false);
   }
-
 }
