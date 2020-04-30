@@ -27,7 +27,7 @@
     [conta]='this.user.Conta'
   ></app-text>
   <app-text class='dadosBancarios'
-    [textValor]='textValor'
+    [textValor]='this.user.Valor'
   ></app-text>
   <div class='space'>
   </div>
@@ -37,9 +37,9 @@
   ></app-text>
   <app-text class='dadosBancarios'
     [textAgDestinatario]='textAgDestinatario'
-    [agenciaDestinatario]='this.user.IdDestinatario' 
+    [agenciaDestinatario]='this.user.destinatarioAgencia' 
     [textContaDestinatario]='textContaDestinatario'
-    [contaDestinatario]='this.user.IdDestinatario'
+    [contaDestinatario]='this.user.destinatarioConta'
   ></app-text>
   <app-text class='dadosBancarios'
     [textCpfDest]='textCpfDest'
@@ -47,12 +47,12 @@
   ></app-text>
   </div>
   <div class='btnSalvar'>
-    <app-button class='btn btn-info'
+    <!-- <app-button class='btn btn-info'
       [type]='submit' 
       [title]='titleBtnProx' 
       [nameButton]='nameBtnProx' 
       (click)='Salvar()'>
-    </app-button>
+    </app-button> -->
   </div>
 </main>
 <app-footer

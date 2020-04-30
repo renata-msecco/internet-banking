@@ -39,6 +39,11 @@ export class PaginaHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUser();
+    localStorage.removeItem('destinatario_nome');
+    localStorage.removeItem('destinatario_id');
+    localStorage.removeItem('cliente_valor');
+    localStorage.removeItem('destinatario_agencia');
+    localStorage.removeItem('destinatario_conta');
     this.user = new User();
     this.user.Id = Number(window.localStorage.getItem('cliente_id'));
     this.user.Nome = window.localStorage.getItem('cliente_nome');

@@ -8,5 +8,7 @@ export class User {
     public SaldoI: number;
     public Destinatario: string;
     public IdDestinatario: number;
+    public destinatarioConta: string;
+    public destinatarioAgencia: string;
     public Valor: string;
 }
