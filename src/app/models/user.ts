@@ -8,4 +8,5 @@ export class User {
     public SaldoI: number;
     public Destinatario: string;
     public IdDestinatario: number;
+    public Valor: string;
 }

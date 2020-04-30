@@ -14,7 +14,8 @@
           [placeholder]='placeholderValor' 
           [class]='classInput' 
           [nameInput]='nameInputValor'
-        ></app-input>
+          (keyup)='getValor($event)'>
+        </app-input>
     </form>
     <div class='btnStyle'>
         <app-button class='btn btn-danger'
