@@ -1,0 +1,24 @@
+.extrato{
+    background-color: rgb(212, 237, 241);
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    
+}
+
+.data{
+    color:#276983;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.valor{
+    font-size: 1.0rem;
+    
+}
+
+.descricao{
+    font-size: 1.0rem;
+    font-weight: lighter;
+}
