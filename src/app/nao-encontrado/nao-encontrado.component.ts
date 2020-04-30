@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NaoEncontradoComponent implements OnInit {
 
+  page404 = ['../../assets/image/404-error.jpg'];
+  
   constructor() { }
 
   ngOnInit(): void {
