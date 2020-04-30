@@ -5,6 +5,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,6 +54,8 @@ import { TransferenciaSucessoComponent } from './transferencia-sucesso/transfere
     BrowserModule,
     RouterModule,
     FormsModule,
+    CommonModule,
+    ToastrModule.forRoot(),
     ],
   providers: [],
   bootstrap: [AppComponent]

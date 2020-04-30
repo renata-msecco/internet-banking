@@ -1,5 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "bootstrap";
+@import '~ngx-toastr/toastr';
+
 
 body{
     margin:0;
