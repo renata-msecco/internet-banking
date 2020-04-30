@@ -1,27 +1,25 @@
-# InternetBankingAvanade
+# Internet Banking - RetrôBank
+ 
+O projeto foi dividido entre Front-end, desenvolvido com o framework Angular versão 9.1.1. e Back-end, desenvolvido em linguagem C#, através de um projeto monolítico, através da criação e consumo de uma Azure API.  
+ 
+## Configuração e Inicialização do projeto
+ 
+Para configuração inicial do projeto é necessário ter o framework Angular instalado, para isso no terminal executar a CLI, `npm install`,  seguido do comando,  `npm install` e por último `ng serve` para acesso ao servidor através da `http://localhost:4200/` que irá carregar a página automaticamente no navegador.
+ 
+## Seeds
+O banco de dados da API foi populado e inicializado com informações de usuários que podem ser testados através dos seguintes CPF e senha a serem preenchidos em seus respectivos campos do sistema com 5 usuários listados:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+1)CPF: 111.111.111-11;
+  Senha: 12345;
+ 
+2)CPF: 222.222.222-22;
+  Senha: 12345;
+ 
+3)CPF: 333.333.333-33;
+  Senha: 12345;
+ 
+4)CPF: 444.444.444-44;
+  Senha: 12345;
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+5)CPF: 555.555.555-55;
+  Senha: 12345;
