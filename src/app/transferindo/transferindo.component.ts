@@ -52,18 +52,16 @@ export class TransferindoComponent implements OnInit {
 
   YesTransf(){
     this.http.post('https://retro-bank-api.azurewebsites.net/transferencia', {
-      id: this.user.Id,
-      idD: this.user.IdDestinatario,
+      clienteRemetenteId: this.user.Id,
+      clienteDestinatarioId: this.user.IdDestinatario,
       valor: Number(this.textValor),
-    }).subscribe((transf: User) => {
+    }).subscribe((cliente: User) => {
       try{
-        console.log(transf);
+        this.router.navigate(['trasferSucesso']);
       }catch {
         console.log('Falha no servidor');
       }
     });
-
-    this.router.navigate(['trasferSucesso']);
   }
   // autenticacaoDoUsuario() {
   //   this.http.post('https://retro-bank-api.azurewebsites.net/clientes/login', {

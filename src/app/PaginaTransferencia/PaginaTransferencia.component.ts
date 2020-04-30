@@ -40,7 +40,7 @@ export class PaginaTransferenciaComponent implements OnInit {
   destinatarioConta = '';
   idDestinatario = '';
   nomeDestinatario = '';
-  
+  destinatarioCPF: '';
 
 
   constructor(
@@ -73,7 +73,6 @@ export class PaginaTransferenciaComponent implements OnInit {
 
   ProxTransf() {
     this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
-      console.log(clientes);
 
       clientes.forEach(element => {
         if (element.Conta === this.destinatarioConta) {
@@ -81,8 +80,9 @@ export class PaginaTransferenciaComponent implements OnInit {
           this.nomeDestinatario = element.Nome;
           window.localStorage.setItem('destinatario_id', this.idDestinatario.toString());
           window.localStorage.setItem('destinatario_nome', this.nomeDestinatario);
+          window.localStorage.setItem('destinatario_conta', this.destinatarioConta);
+          window.localStorage.setItem('destinatario_agencia', this.destinatarioAgencia);
           this.router.navigate(['confirmatransferencia']);
-          console.log('Entrei');
           return;
         }
          else {
