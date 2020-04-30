@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 import { User } from '../models/user';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-pagina-transferencia',
@@ -87,9 +87,18 @@ export class PaginaTransferenciaComponent implements OnInit {
           this.router.navigate(['confirmatransferencia']);
           return;
         }
+
       });
-      this.toastr.error('Confira os dados: usuário não encontrado');
+
     });
+
   }
 }
 
+// tslint:disable-next-line: triple-equals
+// else if (element.Conta  this.destinatarioConta && element.Agencia  this.destinatarioAgencia){
+//   console.log('oi');
+// }
+
+//this.router.navigate(['confirmatransferencia']);
+//this.toastr.error('Confira os dados: usuário não encontrado');
