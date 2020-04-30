@@ -19,6 +19,8 @@ import { PaginaTransferenciaComponent } from './PaginaTransferencia/PaginaTransf
 import { TextComponent } from './text/text.component';
 import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
 import { ConfirmaTransfComponent } from './confirma-transf/confirma-transf.component';
+import { TransferenciaValorComponent } from './transferencia-valor/transferencia-valor.component';
+import { TransferindoComponent } from './transferindo/transferindo.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ConfirmaTransfComponent } from './confirma-transf/confirma-transf.compo
     TextComponent,
     NaoEncontradoComponent,
     ConfirmaTransfComponent,
+    TransferenciaValorComponent,
+    TransferindoComponent,
 
   ],
   imports: [

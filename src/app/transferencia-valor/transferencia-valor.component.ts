@@ -4,29 +4,32 @@ import { Router } from '@angular/router';
 import { User } from '../models/user';
 
 @Component({
-  selector: 'app-confirma-transf',
-  templateUrl: './confirma-transf.component.html',
-  styleUrls: ['./confirma-transf.component.css']
+  selector: 'app-transferencia-valor',
+  templateUrl: './transferencia-valor.component.html',
+  styleUrls: ['./transferencia-valor.component.css']
 })
-export class ConfirmaTransfComponent implements OnInit {
+export class TransferenciaValorComponent implements OnInit {
 
   user: User = null;
   classFooter = 'buttonFooter';
   nameBtnFooter = 'nameBtnFooter';
   titleBtnFotter = 'Home';
-  submit = 'submit';
-  TextConfirma = 'aqui você confirma o nome da pessoa que deseja transferir:';
-  styleConfirma = 'styleConfirma';
-  confirma = 'O nome esta correto ?';
+  textMsg = 'Digite o valor da transferencia para';
+  classNome = 'textMsg';
   nomeDestinatario = 'nomeDestinatario';
-  styleConf = 'styleConf';
-  titleBtnProx = 'Próximo';
-  nameBtnProx = 'nameBtnProx';
+  submit = 'submit';
+  textValor = 'textValor';
+  placeholderValor = 'R$ 00,00';
+  classInput = 'input';
+  nameInputValor = 'nameInputValor';
   titleBtnAnt = 'Anterior';
-
+  nameBtnProx = 'nameBtnProx';
+  titleBtnProx = 'Próximo';
 
   constructor(
+
     private router: Router,
+
   ) { }
 
   ngOnInit(): void {
@@ -44,11 +47,10 @@ export class ConfirmaTransfComponent implements OnInit {
   }
 
   NoTransf(){
-    this.router.navigate(['transferencia']);
+    this.router.navigate(['confirmatransferencia']);
   }
 
   YesTransf(){
-    this.router.navigate(['trasferenciaValor']);
+    this.router.navigate(['ffffffff']);
   }
-
 }
