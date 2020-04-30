@@ -75,12 +75,14 @@ export class PaginaTransferenciaComponent implements OnInit {
       console.log(clientes);
 
       clientes.forEach(element => {
-        if (element.Conta == this.destinatarioConta) {
+        if (element.Conta === this.destinatarioConta) {
           this.idDestinatario = element.Id.toString();
           this.nomeDestinatario = element.Nome;
           window.localStorage.setItem('destinatario_id', this.idDestinatario.toString());
           window.localStorage.setItem('destinatario_nome', this.nomeDestinatario);
           this.router.navigate(['confirmatransferencia']);
+          console.log('Entrei');
+          return;
         }
          else {
           console.log('Não deu');

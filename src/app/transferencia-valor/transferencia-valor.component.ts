@@ -25,6 +25,7 @@ export class TransferenciaValorComponent implements OnInit {
   titleBtnAnt = 'Anterior';
   nameBtnProx = 'nameBtnProx';
   titleBtnProx = 'Próximo';
+  valor = 0;
 
 
   constructor(
@@ -43,6 +44,11 @@ export class TransferenciaValorComponent implements OnInit {
     this.user.IdDestinatario = Number(window.localStorage.getItem('destinatario_id'));
   }
 
+  getValor($event){
+    this.valor = $event.target.value;
+    return this.valor;
+  }
+
   Home() {
     this.router.navigate(['home']);
   }
@@ -52,6 +58,7 @@ export class TransferenciaValorComponent implements OnInit {
   }
 
   YesTransf(){
+    window.localStorage.setItem('cliente_valor', this.valor.toString());
     this.router.navigate(['trasferindo']);
   }
 }
