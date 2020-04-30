@@ -27,7 +27,8 @@
     [conta]='this.user.Conta'
   ></app-text>
   <app-text class='dadosBancarios'
-    [textValor]='this.user.Valor'
+    [textValor]='textDinheiro'
+    [textConta]='this.textValor'
   ></app-text>
   <div class='space'>
   </div>
@@ -41,10 +42,10 @@
     [textContaDestinatario]='textContaDestinatario'
     [contaDestinatario]='this.user.destinatarioConta'
   ></app-text>
-  <app-text class='dadosBancarios'
+  <!-- <app-text class='dadosBancarios'
     [textCpfDest]='textCpfDest'
     [cpfDestinatario]='this.user.IdDestinatario'
-  ></app-text>
+  ></app-text> -->
   </div>
   <div class='btnSalvar'>
     <!-- <app-button class='btn btn-info'
