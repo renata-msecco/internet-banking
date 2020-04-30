@@ -20,7 +20,7 @@ export class TransferenciaSucessoComponent implements OnInit {
   classNome = 'textMsg';
   textComprovante = 'Comprovante';
   textEm = 'Transferido em:';
-  transfData = '16/06/2020 ás 16:00';
+  transfData = null;
   textDe = 'De:';
   textAgencia = 'Agencia:';
   textConta = 'Conta:';
@@ -31,6 +31,14 @@ export class TransferenciaSucessoComponent implements OnInit {
   textCpfDest = 'CPF:';
   titleBtnProx = 'Salvar';
   nameBtnProx = 'nameBtnProx';
+  textDinheiro = 'Valor: R$ ';
+  hoje = null;
+  dia = null;
+  mes = null;
+  ano = null;
+  data = null;
+  hora = null;
+  minuto = null;
 
   constructor(
     private router: Router,
@@ -49,6 +57,14 @@ export class TransferenciaSucessoComponent implements OnInit {
     this.user.destinatarioConta = window.localStorage.getItem('destinatario_conta');
     this.user.Valor = window.localStorage.getItem('cliente_valor');
     this.textValor = Number(this.user.Valor).toFixed(2);
+    this.hoje = new Date();
+    this.dia = this.hoje.getDate();
+    this.mes = this.hoje.getMonth() + 1;
+    this.ano = this.hoje.getFullYear();
+    this.hora = this.hoje.getHours();
+    this.minuto = this.hoje.getMinutes();
+    this.data = `${this.dia}/${this.mes}/${this.ano} às ${this.hora}:${this.minuto}`;
+    this.transfData = this.data;
   }
 
   Home() {
