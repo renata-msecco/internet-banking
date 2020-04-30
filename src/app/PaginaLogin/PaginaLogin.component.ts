@@ -70,7 +70,7 @@ export class PaginaLoginComponent implements OnInit {
           this.router.navigate(['home']);
         }
         else {
-          this.toastr.error('Usuário ou senha inválidos');
+          this.toastr.error('CPF ou senha inválidos');
           window.localStorage.setItem('cliente_id', cliente.Id.toString());
         }
       }

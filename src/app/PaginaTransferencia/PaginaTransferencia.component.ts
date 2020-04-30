@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { User } from '../models/user';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-pagina-transferencia',
@@ -46,6 +47,7 @@ export class PaginaTransferenciaComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
+    private toastr: ToastrService,
 
   ) { }
 
@@ -75,7 +77,7 @@ export class PaginaTransferenciaComponent implements OnInit {
     this.http.get('https://retro-bank-api.azurewebsites.net').subscribe((clientes: User[]) => {
 
       clientes.forEach(element => {
-        if (element.Conta === this.destinatarioConta) {
+        if (element.Conta === this.destinatarioConta && element.Agencia === this.destinatarioAgencia) {
           this.idDestinatario = element.Id.toString();
           this.nomeDestinatario = element.Nome;
           window.localStorage.setItem('destinatario_id', this.idDestinatario.toString());
@@ -85,10 +87,8 @@ export class PaginaTransferenciaComponent implements OnInit {
           this.router.navigate(['confirmatransferencia']);
           return;
         }
-         else {
-          console.log('Não deu');
-        }
       });
+      this.toastr.error('Confira os dados: usuário não encontrado');
     });
   }
 }
