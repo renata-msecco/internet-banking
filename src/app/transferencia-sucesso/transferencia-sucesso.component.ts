@@ -15,7 +15,22 @@ export class TransferenciaSucessoComponent implements OnInit {
   nameBtnFooter = 'nameBtnFooter';
   titleBtnFotter = 'Home';
   submit = 'submit';
-
+  textMsg = 'Transferencia realizada com sucesso!';
+  classNome = 'textMsg';
+  textComprovante = 'Comprovante';
+  textEm = 'Transferido em:';
+  transfData = '16/06/2020 ás 16:00';
+  textDe = 'De:';
+  textAgencia = 'Agencia:';
+  textConta = 'Conta:';
+  textValor = 'Valor: R$ 100,00';
+  textPara = 'Para:';
+  textAgDestinatario = 'Agencia:';
+  textContaDestinatario = 'Conta:';
+  textCpfDest = 'CPF:';
+  titleBtnProx = 'Salvar';
+  nameBtnProx = 'nameBtnProx';
+  
   constructor(
     private router: Router,
   ) { }
@@ -32,6 +47,10 @@ export class TransferenciaSucessoComponent implements OnInit {
 
   Home() {
     this.router.navigate(['home']);
+  }
+
+  Salvar(){
+    console.log('salvo')
   }
 
 }

@@ -20,9 +20,9 @@ export class ConfirmaTransfComponent implements OnInit {
   confirma = 'O nome esta correto ?';
   nomeDestinatario = 'nomeDestinatario';
   styleConf = 'styleConf';
-  titleBtnProx = 'Próximo';
+  titleBtnProx = 'Confirmar';
   nameBtnProx = 'nameBtnProx';
-  titleBtnAnt = 'Anterior';
+  titleBtnAnt = 'Cancelar';
 
 
   constructor(
